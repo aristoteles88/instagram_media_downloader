@@ -9,6 +9,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
+    "https://instagram-media-downloader.onrender.com"
 ]
 
 app.add_middleware(
