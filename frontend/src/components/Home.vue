@@ -85,7 +85,6 @@
 <script>
 
   import axios from "axios";
-  import InstagramEmbed from 'vue-instagram-embed';
 
 
   export default {
@@ -103,6 +102,7 @@
         },
         selectedPhotos: [],
         selectedVideo: "",
+        API_URL: import.meta.env.VITE_API_URL,
       }
     },
     methods: {
@@ -125,7 +125,7 @@
         }
       },
       async getMedia() {
-        return await axios.get("/api/get_data?url=" + this.url)
+        return await axios.get("http://" + this.API_URL + "/api/get_data?url=" + this.url)
       },
       manageSelected(index) {
         let selectedUrl = this.mediaData.mediaUrls[index]

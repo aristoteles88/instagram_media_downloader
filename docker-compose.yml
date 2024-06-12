@@ -1,0 +1,17 @@
+version: '3'
+services:
+  frontend:
+    image: docker.io/aristoteles88/media-downloader-frontend:latest
+    ports:
+      - 3000:4173
+    networks:
+      - app
+  backend:
+    image: docker.io/aristoteles88/media-downloader-backend:latest
+    ports:
+      - 8000:8000
+    networks:
+      - app
+networks:
+  app:
+    
