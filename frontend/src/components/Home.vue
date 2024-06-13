@@ -125,7 +125,7 @@
         }
       },
       async getMedia() {
-        return await axios.get("http://" + this.API_URL + "/api/get_data?url=" + this.url)
+        return await axios.get("https://" + this.API_URL + "/api/get_data?url=" + this.url)
       },
       manageSelected(index) {
         let selectedUrl = this.mediaData.mediaUrls[index]
