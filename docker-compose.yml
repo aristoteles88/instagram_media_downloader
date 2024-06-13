@@ -4,6 +4,8 @@ services:
     image: docker.io/aristoteles88/media-downloader-frontend:latest
     ports:
       - 3000:4173
+    environment:
+      - VITE_API_URL=raspberrypi.local
     networks:
       - app
   backend:
